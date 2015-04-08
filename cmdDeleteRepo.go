@@ -17,7 +17,7 @@ func cmdDeleteRepo(c *cli.Context) {
 		log.Fatal("you must specify a repo")
 	}
 
-	if err := client.Delete(repo); err != nil {
+	if err := client.DeleteRepository(repo); err != nil {
 		log.Fatal(err)
 	}
 }
