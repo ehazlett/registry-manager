@@ -24,6 +24,7 @@ func cmdInspectRepo(c *cli.Context) {
 	}
 	fmt.Printf("Namespace: %s\n", r.Namespace)
 	fmt.Printf("Repository: %s\n", r.Repository)
+	fmt.Printf("Size: %.2f MB\n", float64(float64(r.Size)/float64(1048576)))
 	fmt.Print("Layers: \n")
 	for _, layer := range r.Layers {
 		fmt.Printf(" - ID: %s\n   Author: %s\n   Docker Version: %s\n   Size: %d\n",
